@@ -19,6 +19,7 @@
     align-items: center;
     padding: 0;
     list-style-type: none;
+    margin-top: 2rem;
   }
   
   nav ul li a {
@@ -31,6 +32,7 @@
     text-transform: uppercase;
     font-weight: 800;
     padding: 0rem 1rem;
+
   }
   
   nav ul li a:hover {
@@ -67,12 +69,12 @@
 
 #details {
   text-align: center;
-padding: 1rem;
+  padding: 1rem;
 }
 
 .swiper {
   height: 65vh;
-  width: 35vw;
+  width: 28vw;
   margin-top: 2rem;
 }
 
@@ -82,7 +84,7 @@ padding: 1rem;
     align-items: center;
     justify-content: center;
   padding: 1rem;
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 2rem;
   border-top-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -167,7 +169,7 @@ h2 {
       }
 
     #rsvp {
-    width: 60vw;
+    width: 50vw;
       text-align: justify;
     }
 
@@ -226,7 +228,8 @@ h2 {
     }
 
 .accordion {
-  margin: 2rem auto; 
+  margin: 1rem auto; 
+  color: var(--white);
   background-color: var(--red);
   border-top-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -243,7 +246,7 @@ h2 {
       cursor: pointer;
       text-shadow: 1px 1px 6px #363636;
       text-transform: uppercase;
-      color: var(--white);
+      
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -277,8 +280,8 @@ h2 {
     
 
       @keyframes rotate {
-        0% { transform: rotate(30deg)}
-        50% { transform: rotate(-90deg) }
+        0% { transform: rotate(40deg)}
+        50% { transform: rotate(-50deg) }
         100% { transform: rotate(0deg) }
         }
   
@@ -326,13 +329,20 @@ h2 {
     
     @media (max-width: 600px) {
 
-      #intro, .accordion #rsvp {
+      #intro, .accordion, #rsvp {
         width: 90vw;
+      }
+
+      .swiper {
+        width: 80vw;
+        height: 55vh;
+        font-size: 1rem;
       }
 
 
       #story {
         margin: 2rem 0;
+
       }
 
       form, #intro {
@@ -417,3 +427,10 @@ h2 {
       }
     }
   
+    @media (max-width: 1000px) {
+.swiper {
+  width: 50vw;
+  height: 70vh;
+}
+
+    }
