@@ -3,24 +3,27 @@
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
         <script src="https://kit.fontawesome.com/f10a60a719.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Spectral:wght@800&display=swap" rel="stylesheet">
       </head>
 
-
+      time is 10:13pm 
         <div class="header">
 
-          <div id="us" class="foreground">
+          <div id="us" class="foreground rotate-animation">
           </div>
           <div class="datetext background fade-in">
             23 MARCH 2024
             </div>
           </div>
+
           <body>
       <section id="details">
-
             <h2>
                 MADELEINE & DAVID
             </h2>
@@ -30,32 +33,98 @@
 
       </section>
 
-      <section id="story">
-        <div id="story-text" class="active">
-          <h2>Our Story</h2>
-          <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum. Lorem Ipsum Lorem Ipsum Lorem Ipsum. Lorem Ipsum Lorem Ipsum Lorem Ipsum.</p>
+      <section id="intro">
+        <div id="story-text">
+          <p>Hello, you're invited to our wedding!</p>
+          <p>That's right, we, David "Novak" Novak and Maddie Vercoe, are having a big ole party in Sydney.</p>
+          <p>Since a fair chunk of you are all over the globe, we figured it's far more simple if we skipped all the paper and post and just sent you to this website.</p>
+          <p>If you could please fill out an RSVP below at your nearest convenience, that would be lovely.</p>
+          <p>If you have any questions, please feel free to hit either me or Maddie up at any time.</p>
+          <p>Email: madeleine.vercoe@gmail.com or davidnovak87@gmail.com</p>
+          <p>Whatsapp: +61 408 432 454 (david)
+          <p>We can't wait to see you all and we thank you in advance for making the effort to come party.</p>
+          <p>I'll waffle on more about the wedding and our *incredible* relationship below...</p>
+          <p>Much love,<br>
+            Novak & Maddie</br>
+            xx
+        </div>  
+        </section>
+
+        <section id="story">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                <h2>OUR STORY</h2>
+                  <p>We are so super excited for this wedding. We figured it's high time we organised a big party with our closest fam & friends.</p>
+                </div>
+            
+                <div class="swiper-slide">
+                  <img src="images/movak_2.jpg">
+                </div>
+            
+                <div class="swiper-slide">
+                  <p>Come the wedding date, it will have been over half a decade since we both matched online, with me only squeezing into Maddie's Inner West Princess radius of 1 km because I was on a date with someone else in the area.</p>
+                </div>
+            
+           
+                <div class="swiper-slide">
+                  <img src="images/movak_1.png">
+              </div>
+          
+                <div class="swiper-slide">
+                  <p>I spent the next four days captive at her & Candice's place in Enmore. 4 years and as many different homes later, we decided to get engaged in beautiful Manila.</p>
+              </div>
+          
+
+              <div class="swiper-slide">
+                <img src="images/movak_6.jpg">
+            </div>
+             
+                <div class="swiper-slide">
+                  <p>And now, after travelling to oh so many weddings, we get to make everyone come to ours. But don't worry, we've decided to make it an easy, hopefully breezy, party.</p>
+              </div>
+                <div class="swiper-slide">
+                  <img src="images/movak_7.jpeg">
+            </div>
+                <div class="swiper-slide">
+                  <p>Both the ceremony and the reception will take place at Mary's Underground in Circular Quay.</p>
+            </div>
+                <div class="swiper-slide">
+                  <img src="images/marys.jpg">
+                </div>
+                <div class="swiper-slide">
+                  <p>So all you have to do is show up, drink, eat, and be merry. For those of you coming from overseas, the location is just about as central as it gets.</p>
+                  <p>There is a train, ferry, light rail, and bus stop just around the corner of the venue, and of course you can also be lazy and get an Uber.</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/quay.jpg">
+              </div>
+                <div class="swiper-slide">
+                  <p>With the wedding being at a licensed venue, this will be an adults-only event. Again, if you have any questions, just reach out or check out the FAQs section. See you all soon!</p>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/movak_3.jpeg">
+                </div>
         </div>
-        <div id="story-img">
-          <img src="draw.jpg">
-        </div>
-      </section>
+      
+      </swiper-container>
+    </section>
 
         
     <section id="runsheet">
       <div class="run-time">5:00pm</div> <div class="run-event">ceremony</div>
       <div class="run-time">5:30pm</div> <div class="run-event">cocktail hour & photos</div>
       <div class="run-time">7:00pm</div> <div class="run-event">reception</div>
-      <div class="run-time">12:00am</div> <div class="run-event">gremlin hours</div>
       <div class="run-time">2:00am</div><div class="run-event">leave</div>
     </section>
 
 
     <section id="rsvp">
-      <div id="intro">
+    
       <h2>RSVP</h2>
       <p>
       <p>We would love to celebrate with you - please let us know if you're able to attend!</p>
-      </div>
+
   
   <form id="rsvpform">
       <input name="name" id="name" type="text" placeholder="Full Name">
@@ -66,7 +135,7 @@
   
           <label for="attendyes">Yes, attending!
         </label></div><div class="cbox">
-          <input type="radio" id="attendno"name="attendance" value="no">
+          <input type="radio" id="attendno" name="attendance" value="no">
           <label for="attendno">No, sorry we can't make it.
         </label>
         </div>
@@ -89,8 +158,8 @@
 <nav>
   <ul>
   
-  <li><a href="/index.html">home</a></li>
-        <li><a href="/faq.html">faqs</a></li>
+  <li><a href="index.html">home</a></li>
+        <li><a href="faq.html">faqs</a></li>
             <li><a href="#rsvp">rsvp</a></li>
             </ul>
 </nav>

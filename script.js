@@ -80,4 +80,8 @@ async function updateSheet(formData) {
   window.addEventListener('scroll', handleScroll);
   window.addEventListener('resize', handleScroll);
   window.addEventListener('DOMContentLoaded', handleScroll);
-  
+
+  let swiper = new Swiper(".mySwiper", {
+    effect: "cards",
+    grabCursor: true,
+  });

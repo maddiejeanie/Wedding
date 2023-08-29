@@ -2,19 +2,10 @@
     --red: #BE1922;
     --black: #252525;
     --grey: #333333;
-    --white: #FBFBF8;
+    --white: #f5f5f5;
     --pink: #f20a31;
     --hotpink: #ea0a67;
     --darkerred: #8B0000;
-  }
-
-  html {
-    scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
-  }
-
-  section {
-    scroll-snap-align: start;
   }
 
   *, body {
@@ -23,7 +14,6 @@
   
 
   nav ul {
-    transform: scaleY(1.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,45 +24,31 @@
   nav ul li a {
     
     text-decoration: none;
-    color: var(--red);
     font-size: 2rem;
     transition: color 0.3s ease;
     word-spacing: -0.2em;
     line-height: 0.8em;
     text-transform: uppercase;
-    font-family: 'Spectral', sans-serif;
     font-weight: 800;
     padding: 0rem 1rem;
-    
   }
   
   nav ul li a:hover {
-    text-shadow: 1px 1px 40px var(--hotpink);
     color: var(--darkerred)
   }
   
   #us {
-    background-image: url('/lovers.jpg');
-    background-size: cover;
-    min-height: 60vh;
-    min-width: 100vw;
+    background-image: url('MOVAK2.webp');
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 70vh;
     background-position: center;
+
  }
-  
-  .fade-in {
-    animation: fadeIn 4s ease-in-out forwards;
-  }
-  
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
 
-
+ #intro {
+  width: 50vw;
+ }
   
   body {
     display:flex;
@@ -80,64 +56,54 @@
     align-content: center;
     align-items: center;
     margin: 0 auto;
-    color: var(--white);
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     letter-spacing: 0.01rem;
     font-size: 1rem;
-    min-height: 100vh;
-    margin: 0;
     opacity: 1;
-    background: var(--pink);
-    /*background: radial-gradient(circle farthest-corner at top left, var(--red) 10%, var(--pink) 90%);
-  */}
-
-  .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    margin: 2rem auto; 
-    background-color: rgba(0, 0, 0, 0.1);
-    border-top-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    padding: 1rem;
-    color: var(--white)}
-
-.p2 {
-padding: 2rem;
-}
+    background: var(--white);
+    height: 100%;
+  }
 
 #details {
   text-align: center;
-padding: 2rem;
+padding: 1rem;
 }
 
-#story {
-
-  width: 50%;
-  display: -webkit-inline-flex;
+.swiper {
+  height: 65vh;
+  width: 35vw;
+  margin-top: 2rem;
 }
 
-#story-text {
-  opacity: 0;
-  margin-top: 10%;
+.swiper-slide {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 2rem;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: var(--red);
+  color: var(--white);
+  transform-origin: bottom;
 }
 
-#story img {
-margin-left: -2rem;
-  width: 200px;
-  grid-area: img;
-  border-radius: 100%;
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
+
 
 h2 {
-  font-style: italic;
   font-size: 2rem;
   font-weight: bold;
   letter-spacing: 0.12rem;
-  color: var(--white);
   text-transform: uppercase;
 }
 
@@ -153,11 +119,8 @@ h2 {
   text-transform: uppercase;
   font-family: 'Spectral', sans-serif;
   font-weight: 800;
-  color: #000;
   text-align: center;
-  text-shadow:
-  2px 1px 0px var(--hotpink),
-  1px 2px 0px var(--red);
+  color: var(--red);
 }
 
 .location {
@@ -165,18 +128,21 @@ h2 {
   margin-top: 1rem;
   margin-bottom: 1rem;
   color: var(--black);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 #rsvp {
-  background: var(--red);
-  width:100%;
+  color: var(--white);
   text-align: center;
-  padding: 2rem;
+  background-color: var(--red);
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding: 1rem;
+  width: 50vw;
 }
 
 #rsvp h2 {
-  color: var(--black)
+  color: var(--white);
 }
   
     button {
@@ -192,27 +158,21 @@ h2 {
     }
 
     button#submit {
-      border: 1px solid var(--white);
-
-      box-shadow:
-      0 0 0 0.5rem var(--pink);
       padding: 0.5rem;
       margin: 1rem;
     }
 
     button#submit:hover{
-color: var(--darkerred)    
-}
+      background-color: var(--darkerred);
+      }
 
-    form, #intro {
-    max-width: 70%;
+    #rsvp {
+    width: 60vw;
       text-align: justify;
-      margin: 0 auto;
     }
 
     form {
-      max-width: 70%;
-      display: flex;
+     display: flex;
       flex-direction: column;
       border-radius: 0.5rem;
       margin: 1rem auto;
@@ -226,18 +186,18 @@ color: var(--darkerred)
       padding: 0.5rem;
       margin: 0.5rem;
       font-size: 1rem;
-      background-color: var(--pink);
+      background-color: var(--darkerred);
       color: var(--white);
     } 
 
     input::placeholder {
-      color: var(--darkerred);
-
+      color: seashell;
+      font-size: 0.95rem;
     }
 
     input:focus {
-      border-color: skyblue !important;
-      box-shadow: 0 0 5px skyblue !important;
+      border-color: seashell !important;
+      box-shadow: 0 0 5px seashell !important;
     }
 
     input[type="radio"]{
@@ -257,27 +217,37 @@ color: var(--darkerred)
     }
 
     a {
-      color: var(--darkerred);
+      color: var(--black);
       text-decoration: none;
     }
+
     a:hover, a:visited {
       color:#363636;
     }
 
+.accordion {
+  margin: 2rem auto; 
+  background-color: var(--red);
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding: 1rem;
+  width: 60vw;
+}
     .accordion-item {
     margin: 1rem;
     border-top: 2px solid var(--white);
     padding-top: 1rem;
-    width: 90%;
     }
 
     .accordion-header {
-      display: flex;
-      justify-content: space-between;
       cursor: pointer;
       text-shadow: 1px 1px 6px #363636;
-      width: 80%;
       text-transform: uppercase;
+      color: var(--white);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .accordion-content {
@@ -292,37 +262,26 @@ color: var(--darkerred)
     .fa-heart {
       color: var(--white);
       padding: 0 1rem;
-      height: 3rem;
+      height: 1.5rem;
     }
 
 
     .active {
-      max-height: 700px;
+      max-height: 70vw;
       transition: max-height 0.7s ease-in;
     }
 
     .rotate-animation {
-      animation: rotate 4s 1 linear;
+      animation: rotate 3s 1 linear;
     }
     
 
       @keyframes rotate {
-        0% { transform: rotate(0deg)}
-        50% { transform: rotate(70deg) }
+        0% { transform: rotate(30deg)}
+        50% { transform: rotate(-90deg) }
         100% { transform: rotate(0deg) }
         }
-      
-
-    .accordion-item {
-      position: relative;
-    }
-    
-    .accordion-item .fa-solid.fa-heart {
-      position: absolute;
-      left: 90%;
-      top: 0;
-      margin-top: 1.3rem;
-    }
+  
     
     .accordion-item:hover .fa-solid.fa-heart {
       animation: heartAnimation 2s infinite;
@@ -339,17 +298,16 @@ color: var(--darkerred)
       justify-content: center;
       grid-template-columns: auto auto;
       grid-gap: 2rem;
-      font-style: italic;
       font-size: 1rem;
       font-weight: bold;
       letter-spacing: 0.1rem;
-      color: var(--white);
       margin: 1rem 1rem;
+      width: 80vw;
     }
 
     .run-time {
       font-size: 2.5rem;
-      color: var(--black);
+      color: var(--red);
       opacity: 0;
       text-align: right;
 
@@ -361,18 +319,31 @@ color: var(--darkerred)
     opacity: 0;
     }
 
+   #runsheet {
+      padding: 4rem;
+    }
+
     
     @media (max-width: 600px) {
 
+      #intro, .accordion #rsvp {
+        width: 90vw;
+      }
+
+
+      #story {
+        margin: 2rem 0;
+      }
+
       form, #intro {
-        min-width: 70%;
+        min-width: 60vw;
         }
 
       .datetext {
         font-size: 4rem;
         margin-top: -6.5rem;
         text-align: right;
-        margin-bottom: 3rem;
+        margin-bottom: 1.5rem;
       }
 
       nav ul li a {
@@ -383,6 +354,8 @@ color: var(--darkerred)
       font-size: 2rem;
       }
     }
+      
+      /* ANIMATIONS */
 
     @keyframes slide-in-left {
       0% {
@@ -431,7 +404,16 @@ color: var(--darkerred)
 
     }
     
-    #story-text.animate {
-      animation: opacity 4s forwards;
-    
+    .fade-in {
+      animation: fadeIn 4s ease-in-out forwards;
     }
+    
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  
