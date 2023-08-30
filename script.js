@@ -84,6 +84,5 @@ async function updateSheet(formData) {
   let swiper = new Swiper(".swiper", {
     effect: "cards",
     grabCursor: true,
-    perSlideOffset: 4,
-    slidesPerView: 'auto',
+  
   });
