@@ -84,5 +84,9 @@ async function updateSheet(formData) {
   let swiper = new Swiper(".MySlider", {
     effect: "cards",
     grabCursor: true,
-  
+    cardsEffect: {
+      perSlideOffset: 5, // Space between cards in px
+      perSlideRotate: 1, // Rotation of cards in degrees
+      setWrapperSize: true,
+    }
   });
