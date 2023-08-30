@@ -81,7 +81,9 @@ async function updateSheet(formData) {
   window.addEventListener('resize', handleScroll);
   window.addEventListener('DOMContentLoaded', handleScroll);
 
-  let swiper = new Swiper(".mySwiper", {
+  let swiper = new Swiper(".swiper", {
     effect: "cards",
     grabCursor: true,
+    perSlideOffset: 4,
+    slidesPerView: 'auto',
   });
