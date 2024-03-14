@@ -10,6 +10,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
       })
 
+      content.addEventListener('click', function() {
+        content.classList.toggle('active');
+
+      })
+
   })
 })
 

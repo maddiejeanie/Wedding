@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/f10a60a719.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Spectral:wght@800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+<div id="intro">
+    <h2>THANK YOU FROM THE BOTTOM OF OUR HEARTS</h2>
+
+    <section id="runsheet">
+        <div class="run-time">venue</div> <div class="run-event"><a href="https://www.instagram.com/marysunderground/">@marysunderground</a> c/o angela</div>
+        <div class="run-time">celebrant</div> <div class="run-event"><a href="https://www.instagram.com/lucysuzecelebrant/">@lucysuzecelebrant</a></div>
+        <div class="run-time">photographer</div> <div class="run-event"><a href="https://www.instagram.com/bellaweddings_/">@bellaweddings_</a></div>
+        <div class="run-time">rings</div><div class="run-event"><a href="https://www.instagram.com/mondialbynadia/">@mondialbynadia</a></div>
+        <div class="run-time">florist</div> <div class="run-event"><a href="https://www.instagram.com/sophia_kaplan/">@sophia_kaplan</a></div>
+        <div class="run-time">grooms barong</div> <div class="run-event"><a href="https://www.instagram.com/randolfclothing/">@randolfclothing</a></div>
+        <div class="run-time">brides dress</div> <div class="run-event"><a href="https://www.instagram.com/anthropologieweddings/">@anthropologieweddings</a> & <a href="https://www.instagram.com/moniquelhuillier/">@moniquellhulier</a></div>
+        <div class="run-time">brides hair</div> <div class="run-event"><a href="https://www.instagram.com/yeahhairbaby/">@yeahhairbaby</a></div>
+        <div class="run-time">brides makeup</div> <div class="run-event"><a href="https://www.instagram.com/katebonar_hairandmakeup/">@katebonar_hairandmakeup</a></div>
+        <div class="run-time">cake</div> <div class="run-event"><a href="https://www.instagram.com/sugarbaby.vegancakes/">@sugarbaby.vegancakes</a></div>
+        <div class="run-time">desserts</div> <div class="run-event"><a href="https://www.instagram.com/hanmadesbakehouse">@hanmadesbakehouse</a></div>
+        <div class="run-time">graphics & balloon arch</div><div class="run-event">jh</div>
+        <div class="run-time">website</div> <div class="run-event">the bride, with love</div>
+        <div class="run-time">99% of organising this wedding</div> <div class="run-event">the groom, with love</div>
+      </section>
+
+    <p style="text-align: center"><button id="copyButton">copy credit for socials</button>
+</p>
+    <script>
+        document.getElementById('copyButton').addEventListener('click', function() {
+          const socialCredit = `
+          Bride & Groom: @maddiejeanie & @novakyourself | Venue: @marysunderground c/o angela | Celebrant: @lucysuzecelebrant | Photographer: @bellaweddings_ | Rings: @mondialbynadia | Florist: @sophia_kaplan | Grooms Barong: @randolfclothing | Brides Dress: @anthropologieweddings & @moniquellhulier | Brides Hair: @yeahhairbaby | Brides Makeup: @katebonar_hairandmakeup | Cake: @sugarbaby.vegancakes | Desserts: @hanmadesbakehouse`
+    
+          navigator.clipboard.writeText(socialCredit)
+            .then(() => {
+              alert('Social credit copied to clipboard!');
+            })
+            .catch(err => {
+              console.error('Failed to copy: ', err);
+            });
+        });
+      </script>
+    
+
+  <h2>& ALL OF OUR FAMILY AND FRIENDS, WE LOVE YOU</h2>
+</div>
+
+  <nav>
+    <ul>
+    
+    <li><a href="index.html">home</a></li>
+    <li><a href="/index.html#runsheet">runsheet</a></li>
+    <li><a href="/index.html#gifting">gifting</a></li>
+    <li><a href="/credits.html">credits</a></li>
+          <li><a href="/faq.html">faqs</a></li>
+       
+              </ul>
+  </nav>
+</body>
+
+  </html>
+  
+  <script src="script.js" type="module"></script>

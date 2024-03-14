@@ -11,10 +11,11 @@
   * {
     box-sizing: border-box;
   }
-  
 
   nav ul {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding: 0;
@@ -32,7 +33,7 @@
     text-transform: uppercase;
     font-weight: 800;
     padding: 0rem 1rem;
-
+    color: var(--black)
   }
   
   nav ul li a:hover {
@@ -48,15 +49,8 @@
 
  }
 
- #intro {
-  width: 50vw;
- }
   
   body {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
     margin: 0 auto;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
@@ -67,30 +61,41 @@
     height: 100%;
   }
 
+  #intro {
+    margin: 0 2rem;
+    text-align: justify;
+  }
+
 #details {
   text-align: center;
   padding: 1rem;
 }
 
 .swiper {
+  position: relative; /* Add position relative */
   width: 250px;
   height: 400px;
   max-width: 100%;
   max-height: 100vh;
   min-height: 0;
   min-width: 0;
-  
+  rotate: 5deg;
 }
 
 .swipper-wrapper {
   max-height: 100%;
   height: 100%;
   display: flex;
-  
+  justify-content: center;
+  align-items: center;
 }
 
 .swiper-slide {
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify; /* Justify text */
+  overflow: hidden; /* Hide overflow */
   border-top-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   font-size: 1rem;
@@ -99,11 +104,9 @@
   color: var(--white);
   background-color: var(--red);
   padding: 1rem;
- flex-shrink: 0;
+  flex-shrink: 0;
   height: 100%;
-  max-height: 100%;
   width: 100%;
-
 }
 
 .swiper-slide img {
@@ -115,13 +118,18 @@
 }
 
 
-
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  letter-spacing: 0.12rem;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
+  line-height: 2rem;
 }
+
+.red {
+  color: var(--red)
+}
+
 
 .datetext {
   position: relative;
@@ -162,7 +170,7 @@ h2 {
 }
   
     button {
-      background: var(--pink);
+      background: var(--red);
       border: none;
       color: var(--white);
       border-radius: 0.35rem;
@@ -198,10 +206,9 @@ h2 {
 
     input {
       border: none;
-      border-radius: 0.35rem;
-      padding: 0.5rem;
+      border-radius: 0.5rem;
+      padding: 0.35rem;
       margin: 0.5rem;
-      font-size: 1rem;
       background-color: var(--darkerred);
       color: var(--white);
     } 
@@ -233,10 +240,9 @@ h2 {
     }
 
     a {
-      color: var(--black);
       text-decoration: none;
+      color: var(--red)
     }
-
     a:hover, a:visited {
       color:#363636;
     }
@@ -318,8 +324,7 @@ h2 {
       font-size: 1rem;
       font-weight: bold;
       letter-spacing: 0.1rem;
-      margin: 1rem 1rem;
-      width: 80vw;
+      margin: 0 auto;
     }
 
     .run-time {
@@ -336,12 +341,26 @@ h2 {
     opacity: 0;
     }
 
-   #runsheet {
-      padding: 4rem;
+    .run-event a {
+      color: var(--black)
     }
 
+    .desktop {
+      margin: 2rem auto 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      gap: 5rem;
+      width: 80vw;
+     }
     
     @media (max-width: 600px) {
+
+
+      .desktop {
+        flex-direction: column;
+       }
 
       #intro, .accordion, #rsvp {
         width: 90vw;
@@ -368,7 +387,10 @@ h2 {
       }
 
       .run-time {
-      font-size: 2rem;
+      font-size: 1.2rem;
+      }
+      .run-event {
+        font-size: 0.8rem;
       }
     }
       
@@ -433,3 +455,116 @@ h2 {
       }
     }
   
+/* GRID FOR SEATING */
+.seating {
+  background-color: var(--red);
+  color: var(--white)
+}
+
+.container {
+display:grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-template-areas:
+"Stage Stage seats"
+"Table-21 Table-31 seats"
+"Table-22 Table-32 Table-54"
+"Table-23 Table-33 ."
+"Table-14 Table-14 .";
+gap:0.25rem;
+font-size: 0.8rem;
+
+}
+
+
+
+.Stage { grid-area: Stage; background-color:#999;
+margin: 1rem; }
+
+
+/* Chair styling */
+.chair {
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  padding: 0 0.25rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--red);
+  margin: 0.25rem;
+}
+
+/* Container styling */
+.chair-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#Table-21, #Table-31, #Table-22, #Table-32, #Table-23, #Table-33, #Table-54, #Table-14 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0.5rem;
+}
+
+/* Style for the table elements */
+.table-container {
+  background-color: var(--darkerred);
+  border-radius: 0.5rem;
+  width: 33.3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-size: 0.8rem;
+}
+
+
+#Table-54 .table-container, #Table-14 .table-container, .Stage {
+  padding: 1rem;
+  box-shadow:  -1px 1px #888,
+       -2px 2px #888,
+       -3px 3px #888,
+       -4px 4px #888,
+       -5px 5px #888;
+}
+
+#Table-14 .chair-container {
+flex-direction: row;
+justify-content: space-around;
+}
+
+#Table-14 {
+  flex-direction: column;
+  align-items: center;
+}
+
+#Table-14 .table-container {
+  width: 66%;
+}
+
+
+
+
+
+#Table-21 { grid-area: Table-21; }
+#Table-22 { grid-area: Table-22; }
+#Table-23 { grid-area: Table-23; }
+#Table-31 { grid-area: Table-31; }
+#Table-32 { grid-area: Table-32; }
+#Table-33 { grid-area: Table-33; }
+#Table-54 { grid-area: Table-54; }
+#Table-14 { grid-area: Table-14; }
+
+.highlight {
+  background-color:var(--hotpink);
+  color: var(--white);
+  animation: pulse 1s infinite alternate;
+} 
+
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
