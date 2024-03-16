@@ -466,10 +466,10 @@ grid-template-columns: repeat(3, 1fr);
 grid-template-rows: repeat(5, 1fr);
 grid-template-areas:
 "Stage Stage seats"
-"Table-21 Table-31 seats"
-"Table-22 Table-32 Table-54"
-"Table-23 Table-33 ."
-"Table-14 Table-14 .";
+"Table-1 Table-2 seats"
+"Table-3 Table-4 Table-7"
+"Table-5 Table-6 ."
+"Table-8 Table-8 .";
 gap:0.25rem;
 font-size: 0.8rem;
 
@@ -500,7 +500,7 @@ margin: 1rem; }
   flex-direction: column;
 }
 
-#Table-21, #Table-31, #Table-22, #Table-32, #Table-23, #Table-33, #Table-54, #Table-14 {
+#Table-1, #Table-3, #Table-2, #Table-4, #Table-6, #Table-5, #Table-7, #Table-8 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -520,7 +520,7 @@ margin: 1rem; }
 }
 
 
-#Table-54 .table-container, #Table-14 .table-container, .Stage {
+#Table-7 .table-container, #Table-8 .table-container, .Stage {
   padding: 1rem;
   box-shadow:  -1px 1px #888,
        -2px 2px #888,
@@ -529,17 +529,17 @@ margin: 1rem; }
        -5px 5px #888;
 }
 
-#Table-14 .chair-container {
+#Table-8 .chair-container {
 flex-direction: row;
 justify-content: space-around;
 }
 
-#Table-14 {
+#Table-8 {
   flex-direction: column;
   align-items: center;
 }
 
-#Table-14 .table-container {
+#Table-8 .table-container {
   width: 66%;
 }
 
@@ -547,14 +547,14 @@ justify-content: space-around;
 
 
 
-#Table-21 { grid-area: Table-21; }
-#Table-22 { grid-area: Table-22; }
-#Table-23 { grid-area: Table-23; }
-#Table-31 { grid-area: Table-31; }
-#Table-32 { grid-area: Table-32; }
-#Table-33 { grid-area: Table-33; }
-#Table-54 { grid-area: Table-54; }
-#Table-14 { grid-area: Table-14; }
+#Table-1 { grid-area: Table-1; }
+#Table-2 { grid-area: Table-2; }
+#Table-3 { grid-area: Table-3; }
+#Table-4 { grid-area: Table-4; }
+#Table-5 { grid-area: Table-5; }
+#Table-6 { grid-area: Table-6; }
+#Table-7 { grid-area: Table-7; }
+#Table-8 { grid-area: Table-8; }
 
 .highlight {
   background-color:var(--hotpink);

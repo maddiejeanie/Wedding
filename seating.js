@@ -1,60 +1,96 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Define your SeatingData array
   const SeatingData = [
     {
-        table: "Table-21",
-        pax: 12,
-        names: ["Maja", "Noah", "Chuck", "Kath", "Matt", "Deb", "Natalie", "Jawad", "Eddie", "Olivia", "Jacki", "Brad"]
-    },
-    {
-      table: "Table-31",
-      pax: 12,
-      names: ["Dean", "Mel", "Crosbie", "Matt", "Kirsty", "JH", "Dan", "Julia", "Panda", "Charles", "Ben", "Pip"]
-  },
-    {
-        table: "Table-22",
-        pax: 14,
-        names: [
-            "Tayla", "Ash", "Maddie", "DNovak", "Derek", "Cat", "Catherine", "Kaylie", "Michael", "Kim", "Mitch", "Jae-Do", "Zeyd", "Jason"
-        ]
-    },
-    {
-        table: "Table-32",
-        pax: 14,
-        names: [
-            "Hugh", "Hussy", "Marion", "Janice", "Gary", "Ogie", "Tey", "Paul", "Steve", "Angela", "Eileen", "John", "Joey", "Tina"
-        ]
-    },
-    {
-      table: "Table-23",
-      pax: 10,
-      names: [
-          "Candice", "Jesse", "Jenny", "Hannah", "Jasmine", "Ed", "Nabil", "Claud", "Bianca", "Kayla"
-      ]
-  },
-  {
-      table: "Table-33",
-      pax: 10,
-      names: [
-          "Oli", "Kelsey", "Megan", "Tom", "Alf", "Alex", "Luke", "Tayjia", "Marga", "Carmen"
-      ]
-  },
-  {
-      table: "Table-54",
+      table: 4,
       pax: 14,
       names: [
-          "Nadia", "Lucy", "Wade", "Amy", "Zarina", "Jake", "Bree", "Eloisa", "Gotham", "Dani", "Francesca", "Spare", "Spare", "Spare"
+        'Christine',
+        'Paul',
+        'Marion',
+        'Hassan',
+        'Joey',
+        'Tina',
+        'Tey',
+        'Ogie',
+        'Janice',
+        'John',
+        'Eileen',
+        'Angela',
+        'Stephen',
+        'Hugh'
       ]
-  },
-  {
-      table: "Table-14",
-      pax: 10,
+    },
+    {
+      table: 5,
+      pax: 14,
       names: [
-          "Susan", "Hilary", "Laima", "Paul", "Liana", "Laurie", "Peter", "Jan", "Richard", "Paula"
+        'Francesca',
+        'Marga',
+        'Deborah',
+        'Matt',
+        'Eloisa',
+        'Bree',
+        'Brad',
+        'Jacki',
+        'Gary',
+        'Jake',
+        'Zarina',
+        'Alfonso',
+        'Carmen'
       ]
-  }
-];
-
+    },
+    {
+      table: 6,
+      pax: 14,
+      names: [
+        'Kathy',
+        'Charles',
+        'Zeyd',
+        'John-Henry',
+        'Kirsty',
+        'Megan',
+        'Tom',
+        'Alexandra',
+        'Lucy',
+        'Nadia'
+      ]
+    },
+    {
+      table: 7,
+      pax: 14,
+      names: [
+        'Jan',
+        'Richard',
+        'Hilary',
+        'Liana',
+        'Paul',
+        'Laurie',
+        'Laima',
+        'Susan',
+        'Paula',
+        'Peter'
+      ]
+    },
+    {
+      table: 8,
+      pax: 14,
+      names: [
+        'Jess',
+        'Nick',
+        'Dean',
+        'Luke',
+        'Alex',
+        'Will',
+        'Anna',
+        'Gotham',
+        'Andrew',
+        'Mel',
+        'Julia',
+        'Dan'
+      ]
+    }
+  ];
+  
 
   // Function to generate chair divs
   function generateChairDivs(tableData) {
